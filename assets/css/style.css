@@ -12,11 +12,15 @@ body {
 }
 
 #title {
-    height: 200px;
+    height: 100px;
 }
 
 #titleImg {
-    height: 100%;
+    float: left;
+    position: fixed;
+    overflow: auto;
+    padding-top: 10px;
+    height: 200px;
 }
 
 #charSelect {
@@ -39,4 +43,8 @@ body {
 
 .h3 {
     color: #fff;
+}
+
+#attack, #status {
+    padding-top: 30px;
 }

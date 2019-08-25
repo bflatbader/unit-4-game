@@ -12,7 +12,8 @@ $('#jynCard').on("click", function() {
         for(i = 0; i < cards.length; i++){ 
             if ( cards[i] === selectedChar) {
                 $(this).removeClass("bg-secondary");
-                $(this).addClass("bg-light");
+                $(this).addClass("bg-light border border-success");
+                $('#charText').text("Your Character");
             } else {
                 defender = "#def" + [i];
                 $(defender).append($(cards[i]));
@@ -24,6 +25,7 @@ $('#jynCard').on("click", function() {
     } else {
         defender = "jyn";
         defHP = 120;
+        $(this).addClass("border border-danger");
     }
 });
 
@@ -34,8 +36,7 @@ $('#biggsCard').on("click", function() {
     } else {
         defender = "biggs";
         defHP = 100;
-        $(this).removeClass("text-white");
-        $(this).addClass("text-danger");
+        $(this).addClass("border border-danger");
     }
 });
 
