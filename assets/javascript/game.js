@@ -2,11 +2,25 @@ var selectedChar = null;
 var charHP = 0;
 var defender = null;
 var defHP = 0;
+var cards = ["#jynCard", "#biggsCard", "#bobaCard", "#vaderCard"];
 
 $('#jynCard').on("click", function() {
     if (selectedChar == null){
-        selectedChar = "jyn";
+        selectedChar = "#jynCard";
         charHP = 120;
+
+        for(i = 0; i < cards.length; i++){ 
+            if ( cards[i] === selectedChar) {
+                $(this).removeClass("bg-secondary");
+                $(this).addClass("bg-light");
+            } else {
+                defender = "#def" + [i];
+                $(defender).append($(cards[i]));
+                $(cards[i]).removeClass("bg-secondary");
+                $(cards[i]).addClass("bg-dark");
+                $(cards[i]).addClass("text-white");
+            }
+         }
     } else {
         defender = "jyn";
         defHP = 120;
@@ -20,6 +34,8 @@ $('#biggsCard').on("click", function() {
     } else {
         defender = "biggs";
         defHP = 100;
+        $(this).removeClass("text-white");
+        $(this).addClass("text-danger");
     }
 });
 
