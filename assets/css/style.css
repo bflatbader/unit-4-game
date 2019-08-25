@@ -1,0 +1,38 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.border {
+    border: 1px white solid;
+}
+
+#title {
+    height: 200px;
+}
+
+#titleImg {
+    height: 100%;
+}
+
+#charSelect {
+    padding-top: 30px;
+}
+
+.card {
+    max-width: 202px;
+}
+
+.card:hover {
+    -moz-box-shadow: 0 0 10px #000;
+    -webkit-box-shadow: 0 0 10px #000;
+	box-shadow: 0 0 10px #000;
+}
+
+.card-img-top {
+    width: 200px;
+}

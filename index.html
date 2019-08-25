@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Monofett|Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <title>Star Wars RPG</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="title" class="col-md-12 text-right">
+                <img src="/assets/images/title.png" id="titleImg" class="img-fluid" alt="Star Wars RPG">
+            </div>
+        </div>
+        <div class="row" id="charSelect">
+            <!-- Character Selection -->
+            <div class="col-md-3 text-center">
+                <!-- Jyn Erso -->
+                <div id="jynCard" class="card" style="width: 18rem;">
+                    <img src="/assets/images/jyn.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text"><strong>Jyn Erso</strong></p>
+                        <p class="card-text"><span id="jynHP">120</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <!-- Boba Fett -->
+                <div id="bobaCard" class="card" style="width: 18rem;">
+                    <img src="/assets/images/biggs.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text"><strong>Biggs Darklighter</strong></p>
+                        <p class="card-text"><span id="biggsHP">100</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <!-- Biggs Darklighter -->
+                <div id="biggsCard" class="card" style="width: 18rem;">
+                    <img src="/assets/images/boba.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text"><strong>Boba Fett</strong></p>
+                        <p class="card-text"><span id="bobaHP">150</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <!-- Darth Vader -->
+                <div id="vaderCard" class="card" style="width: 18rem;">
+                    <img src="/assets/images/vader.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text"><strong>Darth Vader</strong></p>
+                        <p class="card-text"><span id="vaderHP">180</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="yourChar" class="col-md-12">
+                                
+            </div>
+        </div>
+        <div class="row">
+            <div id="defenders" class="col-md-12">
+                                
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>
