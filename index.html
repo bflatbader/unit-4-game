@@ -6,94 +6,54 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Monofett|Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Custom stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <title>Star Wars RPG</title>
+    <title>Crystal Collector</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div id="title" class="col-md-12 text-right">
-                <img src="/assets/images/title.png" id="titleImg" class="img-fluid" alt="Star Wars RPG">
-            </div>
+    <div class="container text-center">
+        <div id="header" class="row">
+            <div class="col-md-12 display-1">CRYSTAL COLLECTOR</div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <span id="charText" class="h3">Choose Your Character</span>
+        <div id="instructions" class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <p>The value of each crystal is hidden from you until you click on it. Try to match the magic number!</p>
             </div>
+            <div class="col-md-1"></div>
         </div>
-        <div class="row" id="charSelect">
-            <!-- Character Selection -->
-            <div class="col-md-3 text-center">
-                <!-- Jyn Erso -->
-                <div id="jynCard" class="card bg-secondary" style="width: 18rem;">
-                    <img src="/assets/images/jyn.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text"><strong>Jyn Erso</strong></p>
-                        <p class="card-text"><span id="jynHP">120</span></p>
-                    </div>
-                </div>
+        <div id="numbers" class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3 lead">Magic Number:<br>
+                <span id="goal"></span>
             </div>
-            <div class="col-md-3 text-center">
-                <!-- Boba Fett -->
-                <div id="biggsCard" class="card bg-secondary" style="width: 18rem;">
-                    <img src="/assets/images/biggs.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text"><strong>Biggs Darklighter</strong></p>
-                        <p class="card-text"><span id="biggsHP">100</span></p>
-                    </div>
-                </div>
+            <div class="col-md-3 lead">Your Score:<br>
+                <span id="score"></span>
             </div>
-            <div class="col-md-3 text-center">
-                <!-- Biggs Darklighter -->
-                <div id="bobaCard" class="card bg-secondary" style="width: 18rem;">
-                    <img src="/assets/images/boba.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text"><strong>Boba Fett</strong></p>
-                        <p class="card-text"><span id="bobaHP">150</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 text-center">
-                <!-- Darth Vader -->
-                <div id="vaderCard" class="card bg-secondary" style="width: 18rem;">
-                    <img src="/assets/images/vader.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text"><strong>Darth Vader</strong></p>
-                        <p class="card-text"><span id="vaderHP">180</span></p>
-                    </div>
-                </div>
-            </div>
+            <div class="col-md-3"></div>
         </div>
-        <!-- Enemy Row -->
-        <div class="row">
-            <div class="col-md-12">
-                <p class="h3">Enemies Available to Attack</p>
-            </div>
+        <div id="crystals" class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2"><img src="assets/images/eagleCrystal.png" id="crystal1" class="imgGem" alt=""></div>
+            <div class="col-md-2"><img src="assets/images/seaGreen.png" id="crystal2" class="imgGem" alt=""></div>
+            <div class="col-md-2"><img src="assets/images/goldBrnCrystal.png" id="crystal4" class="imgGem" alt=""></div>
+            <div class="col-md-2"><img src="assets/images/stormCrystal.png" id="crystal3" class="imgGem" alt=""></div>
+            <div class="col-md-2"></div>
         </div>
-        <div class="row">
-            <div id="def1" class="col-md-3"></div>
-            <div id="def2" class="col-md-3"></div>
-            <div id="def3" class="col-md-3"></div>
-            <div id="def3" class="col-md-3"></div>
-        </div>
-        <!-- Attack Area -->
-        <div id="attack" class="row">
-            <div class="col-md-12">
-                <button type="button" class="btn btn-secondary">Attack</button>
+        <div id="scoreboard" class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 h5">
+                Wins: <span id="wins"></span><br>
+                Losses: <span id="losses"></span>
             </div>
-        </div>
-        <!-- Status Area -->
-        <div id="status" class="row">
-            <div class="col-md-12">
-                <p class="h3">Status</p>
-            </div>
+            <div class="col-md-4"></div>
         </div>
     </div>
 
-    <!-- Script -->
+    <!-- JavaScript -->
     <script src="assets/javascript/game.js"></script>
 </body>
 </html>
